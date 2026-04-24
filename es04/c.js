@@ -1,11 +1,9 @@
-<!doctype html>
-<html lang="it">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<html lang="it"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calcolatrice</title>
     <style>
-    
+      /* Reset e font */
       * {
         box-sizing: border-box;
         font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -20,7 +18,7 @@
         margin: 0;
       }
 
-     
+      /* Container principale */
       .container {
         background: white;
         padding: 2rem;
@@ -37,6 +35,7 @@
         font-weight: 300;
       }
 
+      /* Form e Input */
       label {
         font-size: 0.9rem;
         color: #7f8c8d;
@@ -59,7 +58,7 @@
         border-color: #3498db;
       }
 
-
+      /* Pulsante */
       button {
         background: #3498db;
         color: white;
@@ -83,17 +82,18 @@
         transform: translateY(0);
       }
 
+      /* Area Risultato */
       #result {
         margin-top: 25px;
         padding: 15px;
         background: #f8f9fa;
         border-radius: 10px;
         border-left: 5px solid #3498db;
-        white-space: pre-wrap; 
+        white-space: pre-wrap; /* Mantiene la formattazione del testo */
         font-family: "Courier New", Courier, monospace;
         font-size: 0.85rem;
         color: #34495e;
-        display: none;
+        display: none; /* Nascosto finché non c'è un risultato */
       }
 
       .error {
@@ -106,21 +106,18 @@
     <div class="container">
       <h1>Calcolatrice</h1>
 
-      <form
-        id="calculatorForm"
-        onsubmit="
+      <form id="calculatorForm" onsubmit="
           calcola();
           return false;
-        "
-      >
+        ">
         <label>Primo numero</label>
-        <input type="number" id="num1" step="any" placeholder="2" required />
+        <input type="number" id="num1" step="any" placeholder="2" required="">
 
         <label>Operazione (+, -, *, /)</label>
-        <input type="text" id="operation" placeholder="+" required />
+        <input type="text" id="operation" placeholder="+" required="">
 
         <label>Secondo numero</label>
-        <input type="number" id="num2" step="any" placeholder="4" required />
+        <input type="number" id="num2" step="any" placeholder="4" required="">
 
         <button type="submit">CALCOLA</button>
       </form>
@@ -192,5 +189,6 @@
         resultDiv.style.display = "block";
       }
     </script>
-  </body>
-</html>
+  
+
+</body></html>
