@@ -1,97 +1,168 @@
-<!DOCTYPE html>
-<html lang="it">
-<head>
-<meta charset="UTF-8">
-<title>Archivio Esercizi</title>
+<html lang="it"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Matteo Chiappa – 4CINF</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&amp;family=Syne:wght@400;600;800&amp;display=swap" rel="stylesheet">
+  <style>
+:root {
+  --bg: #0a0a0a;
+  --card: #111;
+  --border: #222;
+  --text: #f5f5f5;
+  --muted: #888;
+  --accent: #00e0ff;
+}
 
-<style>
-    body {
-        margin: 0;
-        font-family: 'Segoe UI', sans-serif;
-        background: linear-gradient(135deg, #0f172a, #1e293b);
-        color: #e2e8f0;
-        text-align: center;
-    }
+/* Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
-    h1 {
-        font-size: 50px;
-        margin-top: 50px;
-        letter-spacing: 2px;
-    }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, sans-serif;
+}
 
-    .subtitle {
-        color: #38bdf8;
-        margin-bottom: 40px;
-    }
+/* Container */
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 60px 20px;
+}
 
-    .section {
-        margin-top: 50px;
-    }
+/* Header */
+h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
 
-    .section-title {
-        font-size: 14px;
-        letter-spacing: 4px;
-        color: #94a3b8;
-        margin-bottom: 20px;
-    }
+h1 span {
+  color: var(--accent);
+}
 
-    .welcome {
-        width: 60%;
-        margin: auto;
-        padding: 25px;
-        border-radius: 15px;
-        background: rgba(255,255,255,0.05);
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(255,255,255,0.1);
-    }
+.subtitle {
+  color: var(--muted);
+  margin-bottom: 40px;
+}
 
-    .grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 25px;
-        padding: 40px;
-        width: 80%;
-        margin: auto;
-    }
+/* Divider */
+.divider {
+  margin: 40px 0;
+  border-bottom: 1px solid var(--border);
+}
 
-    .card {
-        padding: 30px;
-        border-radius: 15px;
-        background: rgba(255,255,255,0.05);
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(255,255,255,0.1);
-        transition: 0.3s;
-        cursor: pointer;
-    }
+/* Group */
+.group {
+  margin-bottom: 50px;
+}
 
-    .card:hover {
-        transform: translateY(-10px) scale(1.03);
-        box-shadow: 0 0 20px rgba(56,189,248,0.4);
-    }
+.group-label {
+  color: var(--accent);
+  font-size: 12px;
+  margin-bottom: 15px;
+}
 
-    a {
-        text-decoration: none;
-        color: inherit;
-    }
+/* Cards grid */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+}
+
+/* Card */
+.card {
+  display: block;
+  text-decoration: none;
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 20px;
+  border-radius: 10px;
+  transition: 0.25s;
+  position: relative;
+}
+
+/* Hover effect */
+.card:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent);
+  box-shadow: 0 10px 30px rgba(0,224,255,0.2);
+}
+
+/* Text */
+.card-number {
+  font-size: 11px;
+  color: var(--muted);
+  margin-bottom: 5px;
+}
+
+.card-title {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.card-desc {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 8px;
+}
+
+/* Badge */
+.card-type {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 10px;
+  color: var(--accent);
+}
+
+/* Arrow */
+.card-arrow {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  opacity: 0.5;
+}
+
+/* Footer */
+.footer {
+  margin-top: 60px;
+  font-size: 12px;
+  color: var(--muted);
+  text-align: center;
+}
 </style>
 </head>
-
 <body>
+  <div class="orb2"></div>
+  <div class="container">
 
-<h1>Rosa Christian</h1>
-<div class="subtitle">Esercizi Scolastici</div>
+    <header class="header">
+      <div class="badge">Portfolio · 4CINF</div>
+      <h1>Matteo<br><span>Chiappa</span></h1>
+      <p class="subtitle">username: <strong>chiappa.matteo</strong></p>
+    </header>
 
-<div class="section">
-    <div class="section-title">ESERCIZIO 04</div>
+    <div class="divider">
+      <div class="divider-line"></div>
+      <span class="divider-label">Esercizi</span>
+      <div class="divider-line" style="background: linear-gradient(90deg, transparent, var(--border))"></div>
 
-    <div class="grid">
 
-        <a href="es04/a.js">
-            <div class="card"> calcolatrice bash</div>
+    <div class="group">
+      <div class="group-label">// Esercizi 4</div>
+      <div class="cards">
+
+        <a class="card" href="es04/a.js">
+          <div class="card-number">ES·4A</div>
+          <span class="card-type">JS</span>
+          <div class="card-title">Calcolatrice Bash</div>
+          <div class="card-desc">Calcolatrice a linea di comando con Bash.</div>
+          <span class="card-arrow">↗</span>
         </a>
 
+      </div>
     </div>
-</div>
 
-</body>
-</html>
+   
+
+
+</body></html>
