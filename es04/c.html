@@ -1,25 +1,99 @@
-<html lang="it"><head>
-  <meta charset="UTF-8">
-  <title>Calcolatrice</title>
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<title>Calcolatrice</title>
+
+<style>
+body {
+  background: #0a0a0a;
+  font-family: system-ui, sans-serif;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Box centrale */
+.container {
+  background: #111;
+  padding: 30px;
+  border-radius: 12px;
+  width: 300px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+}
+
+/* Titolo */
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #00e0ff;
+}
+
+/* Input */
+input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #222;
+  border-radius: 6px;
+  background: #0f0f0f;
+  color: #fff;
+}
+
+/* Bottone */
+button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  background: #00e0ff;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #00bcd4;
+}
+
+/* Risultato */
+#result {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 18px;
+  color: #66e0ff;
+}
+</style>
 </head>
+
 <body>
+
+<div class="container">
 
 <h2>Calcolatrice</h2>
 
 <form id="calcForm">
-  <label>Numero 1:</label>
-  <input type="text" id="num1"><br><br>
 
-  <label>Operazione (add, sub, mul, div):</label>
-  <input type="text" id="operation"><br><br>
+  <label>Numero 1</label>
+  <input type="text" id="num1">
 
-  <label>Numero 2:</label>
-  <input type="text" id="num2"><br><br>
+  <label>Operazione (add, sub, mul, div)</label>
+  <input type="text" id="operation">
+
+  <label>Numero 2</label>
+  <input type="text" id="num2">
 
   <button type="submit">Calcola</button>
+
 </form>
 
 <h3 id="result"></h3>
+
+</div>
 
 <script>
 document.getElementById("calcForm").addEventListener("submit", function(event) {
@@ -55,7 +129,7 @@ document.getElementById("calcForm").addEventListener("submit", function(event) {
       result = num1 / num2;
       break;
     default:
-      resultElement.textContent = "Operazione non valida. Usa: add, sub, mul, div.";
+      resultElement.textContent = "Operazione non valida.";
       return;
   }
 
@@ -63,6 +137,5 @@ document.getElementById("calcForm").addEventListener("submit", function(event) {
 });
 </script>
 
-
-
-</body></html>
+</body>
+</html>
