@@ -1,30 +1,105 @@
-<!DOCTYPE html>
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Esercitazione sugli oggetti</title>
-  </head>
-  <body>
-    <form>
-      <input type="text" placeholder="Nome" id="nome">
-      <input type="text" placeholder="Cognome" id="cognome">
-      <input type="text" placeholder="Età" id="eta">
-      <input type="submit" onclick="stampaInfo()" placeholder="Invia">
+    <title>Form Persona</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #74ebd5, #acb6e5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        form {
+            background: white;
+            padding: 25px 35px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            width: 300px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            margin-bottom: 15px;
+            transition: 0.3s;
+        }
+
+        input:focus {
+            border-color: #6c63ff;
+            outline: none;
+            box-shadow: 0 0 5px rgba(108, 99, 255, 0.5);
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 8px;
+            background: #6c63ff;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #574fd6;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form id="personaForm">
+        <h2>Inserisci i tuoi dati</h2>
+
+        <label>Nome:</label>
+        <input type="text" id="nome" required=""><br>
+
+        <label>Cognome:</label>
+        <input type="text" id="cognome" required=""><br>
+
+        <label>Età:</label>
+        <input type="number" id="eta" required=""><br>
+
+        <button type="submit">Invia</button>
     </form>
 
     <script>
-      function stampaInfo() {
-        event.preventDefault();
+        document.getElementById("personaForm").addEventListener("submit", function(event) {
+            event.preventDefault();
 
-        const persona = {
-          nome: document.getElementById("nome").value,
-          cognome: document.getElementById("cognome").value,
-          eta: document.getElementById("eta").value,
-        };
+            const nome = document.getElementById("nome").value;
+            const cognome = document.getElementById("cognome").value;
+            const eta = parseInt(document.getElementById("eta").value);
 
-        console.log(persona);
-      }
+            const persona = {
+                nome: nome,
+                cognome: cognome,
+                eta: eta
+            };
+
+            console.log(persona);
+        });
     </script>
 
-  </body></html>
+</body>
+</html>
