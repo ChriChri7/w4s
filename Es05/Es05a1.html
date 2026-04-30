@@ -1,72 +1,30 @@
+<!doctype html>
 <html lang="it">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Esercitazione sugli oggetti</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Esercitazione sugli oggetti</title>
+  </head>
+  <body>
+    <form>
+      <input type="text" placeholder="Nome" id="nome" />
+      <input type="text" placeholder="Cognome" id="cognome" />
+      <input type="text" placeholder="Età" id="eta" />
+      <input type="submit" onclick="stampaInfo()" placeholder="Invia" />
+    </form>
 
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #89f7fe, #66a6ff);
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin: 0;
-    }
+    <script>
+      function stampaInfo() {
+        event.preventDefault();
 
-    form {
-      background: white;
-      padding: 25px;
-      border-radius: 12px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-      width: 280px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
+        const persona = {
+          nome: document.getElementById("nome").value,
+          cognome: document.getElementById("cognome").value,
+          eta: document.getElementById("eta").value,
+        };
 
-    input {
-      padding: 10px;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-    }
-
-    input[type="submit"] {
-      background: #4a90e2;
-      color: white;
-      border: none;
-      cursor: pointer;
-    }
-
-    input[type="submit"]:hover {
-      background: #357ab8;
-    }
-  </style>
-</head>
-
-<body>
-
-  <form id="formPersona">
-    <input type="text" placeholder="Nome" id="nome">
-    <input type="text" placeholder="Cognome" id="cognome">
-    <input type="text" placeholder="Età" id="eta">
-    <input type="submit" value="Invia">
-  </form>
-
-  <script>
-    document.getElementById("formPersona").addEventListener("submit", function(event) {
-      event.preventDefault();
-
-      const persona = {
-        nome: document.getElementById("nome").value,
-        cognome: document.getElementById("cognome").value,
-        eta: document.getElementById("eta").value,
-      };
-
-      console.log(persona);
-    });
-  </script>
-
-</body>
+        console.log(persona);
+      }
+    </script>
+  </body>
 </html>
