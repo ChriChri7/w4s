@@ -30,13 +30,6 @@
       padding: 10px;
       border-radius: 8px;
       border: 1px solid #ccc;
-      transition: 0.3s;
-    }
-
-    input[type="text"]:focus {
-      border-color: #4a90e2;
-      outline: none;
-      box-shadow: 0 0 5px rgba(74,144,226,0.5);
     }
 
     input[type="submit"] {
@@ -46,7 +39,6 @@
       background: #4a90e2;
       color: white;
       cursor: pointer;
-      transition: 0.3s;
     }
 
     input[type="submit"]:hover {
@@ -56,16 +48,19 @@
 </head>
 
 <body>
+
   <form>
     <input type="text" placeholder="Nome" id="nome">
     <input type="text" placeholder="Cognome" id="cognome">
     <input type="text" placeholder="Età" id="eta">
-    <input type="submit" onclick="stampaInfo()" value="Invia">
+
+    <!-- FIX: passo event alla funzione -->
+    <input type="submit" value="Invia" onclick="stampaInfo(event)">
   </form>
 
   <script>
-    function stampaInfo() {
-      event.preventDefault();
+    function stampaInfo(event) {
+      event.preventDefault(); // ora funziona correttamente
 
       const persona = {
         nome: document.getElementById("nome").value,
