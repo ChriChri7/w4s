@@ -1,9 +1,9 @@
 const libro = {
-  titolo: "la fattoria degli animali",
-  autore: "george orwell",
-  annoDiPubblicazione: 1945,
-  genere: "romanzo allegorico e satirico",
-  numeroDiPagina: 144,
+  titolo: "L'amica geniale",
+  autore: "Elena Ferrante",
+  annoDiPubblicazione: 2011,
+  genere: "romanzo di formazione",
+  numeroDiPagina: 331,
 };
 
 for (let key in libro) {
