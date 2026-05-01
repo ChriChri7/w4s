@@ -181,9 +181,9 @@ console.log("\n--- PARTE 4: Array di Oggetti ---\n");
  */
 
 // SCRIVI IL TUO CODICE QUI
-const biblioteca = [
-  const biblioteca = [libro1, libro2, libro3];
-];
+
+const biblioteca = [libro1, libro2, libro3];
+
 
 
 /**
