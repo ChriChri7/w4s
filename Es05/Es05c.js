@@ -160,7 +160,7 @@ console.log("\nNumero di libri:", libriArray.length);
  * Usa try-catch per catturare l'errore e stampare un messaggio appropriato.
  */
 
-cconst jsonNonValido = '{"titolo":"Libro Rotto","autore":"Sconosciuto",}'; // Virgola finale non valida
+const jsonNonValido = '{"titolo":"Libro Rotto","autore":"Sconosciuto",}'; // Virgola finale non valida
 
 
 // SCRIVI IL TUO CODICE QUI
