@@ -1,10 +1,10 @@
-<html><head><meta name="color-scheme" content="light dark"></head><body><pre style="word-wrap: break-word; white-space: pre-wrap;">/**
+/**
  * ESERCITAZIONE 1 - LIVELLO BASE
  * Gestione di una Biblioteca di Libri
  * 
  * Obiettivi:
- * - Creare oggetti con proprietÃ&nbsp; e metodi
- * - Accedere e modificare proprietÃ&nbsp;
+ * - Creare oggetti con proprietà e metodi
+ * - Accedere e modificare proprietà
  * - Utilizzare metodi per operazioni base
  * - Lavorare con array di oggetti
  * 
@@ -21,7 +21,7 @@ console.log("--- PARTE 1: Creazione Oggetti ---\n");
 
 /**
  * ESERCIZIO 1.1
- * Crea un oggetto 'libro1' con le seguenti proprietÃ&nbsp;:
+ * Crea un oggetto 'libro1' con le seguenti proprietà:
  * - titolo: "Il Signore degli Anelli"
  * - autore: "J.R.R. Tolkien"
  * - anno: 1954
@@ -66,8 +66,9 @@ const libro2 = {
 };
 
 
+
 // ============================================================================
-// PARTE 2: Accesso e Modifica delle ProprietÃ&nbsp; (10 minuti)
+// PARTE 2: Accesso e Modifica delle Proprietà (10 minuti)
 // ============================================================================
 
 console.log("\n--- PARTE 2: Accesso e Modifica ---\n");
@@ -84,7 +85,7 @@ console.log(`Titolo: ${libro1.titolo} - Autore: ${libro1.autore}`);
 
 /**
  * ESERCIZIO 2.2
- * Modifica la proprietÃ&nbsp; 'disponibile' del libro2 da false a true
+ * Modifica la proprietà 'disponibile' del libro2 da false a true
  * (qualcuno ha restituito il libro!)
  */
 
@@ -94,12 +95,13 @@ libro2.disponibile = true;
 
 /**
  * ESERCIZIO 2.3
- * Aggiungi una nuova proprietÃ&nbsp; 'isbn' al libro1
+ * Aggiungi una nuova proprietà 'isbn' al libro1
  * Valore: "978-0544003415"
  */
 
 // SCRIVI IL TUO CODICE QUI
 libro1.isbn = "978-0544003415";
+
 
 
 // ============================================================================
@@ -110,9 +112,9 @@ console.log("\n--- PARTE 3: Metodi ---\n");
 
 /**
  * ESERCIZIO 3.1
- * Crea un oggetto 'libro3' con le seguenti proprietÃ&nbsp; e metodi:
+ * Crea un oggetto 'libro3' con le seguenti proprietà e metodi:
  * 
- * ProprietÃ&nbsp;:
+ * Proprietà:
  * - titolo: "Il Nome della Rosa"
  * - autore: "Umberto Eco"
  * - anno: 1980
@@ -166,6 +168,7 @@ libro3.restituisci();
 console.log("Libro disponibile?", libro3.disponibile);
 
 
+
 // ============================================================================
 // PARTE 4: Array di Oggetti (10 minuti)
 // ============================================================================
@@ -178,7 +181,9 @@ console.log("\n--- PARTE 4: Array di Oggetti ---\n");
  */
 
 // SCRIVI IL TUO CODICE QUI
-const biblioteca = [libro1, libro2, libro3];
+const biblioteca = [
+  const biblioteca = [libro1, libro2, libro3];
+];
 
 
 /**
@@ -192,7 +197,7 @@ const biblioteca = [libro1, libro2, libro3];
 
 // SCRIVI IL TUO CODICE QUI
 function cercaPerAutore(libri, autore) {
-  return libri.filter(libro =&gt; libro.autore === autore);
+  return libri.filter(libro => libro.autore === autore);
 }
 
 // Test: decommenta per verificare
@@ -212,7 +217,7 @@ console.log("Libri di Tolkien:", libriTolkien);
 // SCRIVI IL TUO CODICE QUI
 function libriDisponibili(libri) {
   let v = [];
-  for(let i=0; i&lt;biblioteca.length; i++){
+  for(let i=0; i<biblioteca.length; i++){
     if(libri[i].disponibile == true){
       v.push(libri[i]);
     }
@@ -221,9 +226,9 @@ function libriDisponibili(libri) {
 }
 
 // Test: decommenta per verificare
-const disponibili = libriDisponibili(biblioteca);
-console.log("\nLibri disponibili:");
-disponibili.forEach(libro =&gt; console.log("- " + libro.titolo));
+ const disponibili = libriDisponibili(biblioteca);
+ console.log("\nLibri disponibili:");
+ disponibili.forEach(libro => console.log("- " + libro.titolo));
 
 
 /**
@@ -236,13 +241,13 @@ disponibili.forEach(libro =&gt; console.log("- " + libro.titolo));
  * "Titolo: [titolo]
  *  Autore: [autore]
  *  Anno: [anno]
- *  Disponibile: [SÃ¬/No]
+ *  Disponibile: [Sì/No]
  *  ---"
  */
 
 // SCRIVI IL TUO CODICE QUI
 function stampaBiblioteca(libri) {
-  libri.forEach(libro =&gt; {
+  libri.forEach(libro => {
     console.log(`Titolo: ${libro.titolo}`);
     console.log(`Autore: ${libro.autore}`);
     console.log(`Anno: ${libro.anno}`);
@@ -250,6 +255,7 @@ function stampaBiblioteca(libri) {
     console.log("---");
   });
 }
+
 
 // Test: decommenta per verificare
 console.log("\n=== CATALOGO BIBLIOTECA ===");
@@ -301,7 +307,156 @@ console.log("Media pagine:", stats.mediaPagine);
 console.log("Autori:", stats.autori.join(", "));
 
 
+// ============================================================================
+// SOLUZIONI
+// ============================================================================
+
+/**
+ * NOTA PER LO STUDENTE:
+ * Prova a completare tutti gli esercizi senza guardare le soluzioni!
+ * Usa le soluzioni solo per verificare il tuo lavoro o se sei bloccato.
+ * 
+ * Le soluzioni sono commentate alla fine del file.
+ * Scorri in basso per vederle.
+ */
+
+
 console.log("\n=== FINE ESERCITAZIONE 1 ===");
 console.log("Hai completato tutti gli esercizi? Ottimo lavoro!");
 console.log("Passa alla prossima esercitazione per continuare l'apprendimento.\n");
-</pre></body></html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ============================================================================
+// SOLUZIONI DEGLI ESERCIZI
+// ============================================================================
+
+/*
+
+// SOLUZIONE 1.1
+const libro1 = {
+  titolo: "Il Signore degli Anelli",
+  autore: "J.R.R. Tolkien",
+  anno: 1954,
+  genere: "Fantasy",
+  pagine: 1178,
+  disponibile: true
+};
+
+// SOLUZIONE 1.2
+const libro2 = {
+  titolo: "1984",
+  autore: "George Orwell",
+  anno: 1949,
+  genere: "Distopia",
+  pagine: 328,
+  disponibile: false
+};
+
+// SOLUZIONE 2.1
+console.log(`Titolo: ${libro1.titolo} - Autore: ${libro1.autore}`);
+
+// SOLUZIONE 2.2
+libro2.disponibile = true;
+
+// SOLUZIONE 2.3
+libro1.isbn = "978-0544003415";
+
+// SOLUZIONE 3.1
+const libro3 = {
+  titolo: "Il Nome della Rosa",
+  autore: "Umberto Eco",
+  anno: 1980,
+  pagine: 503,
+  disponibile: true,
+  
+  getInfo: function() {
+    return `${this.titolo} di ${this.autore} (${this.anno})`;
+  },
+  
+  presta: function() {
+    if (this.disponibile) {
+      this.disponibile = false;
+      console.log(`Libro prestato: ${this.titolo}`);
+    } else {
+      console.log("Libro non disponibile");
+    }
+  },
+  
+  restituisci: function() {
+    this.disponibile = true;
+    console.log(`Libro restituito: ${this.titolo}`);
+  }
+};
+
+// SOLUZIONE 4.1
+const biblioteca = [libro1, libro2, libro3];
+
+// SOLUZIONE 4.2
+function cercaPerAutore(libri, autore) {
+  return libri.filter(libro => libro.autore === autore);
+}
+
+// SOLUZIONE 4.3
+function libriDisponibili(libri) {
+  return libri.filter(libro => libro.disponibile);
+}
+
+// SOLUZIONE 4.4
+function stampaBiblioteca(libri) {
+  libri.forEach(libro => {
+    console.log(`Titolo: ${libro.titolo}`);
+    console.log(`Autore: ${libro.autore}`);
+    console.log(`Anno: ${libro.anno}`);
+    console.log(`Disponibile: ${libro.disponibile ? "Sì" : "No"}`);
+    console.log("---");
+  });
+}
+
+// SOLUZIONE 5.1
+function statisticheBiblioteca(libri) {
+  const totaleLibri = libri.length;
+  const libriDisponibili = libri.filter(l => l.disponibile).length;
+  const totalePagine = libri.reduce((somma, libro) => somma + libro.pagine, 0);
+  const mediaPagine = Math.round(totalePagine / totaleLibri);
+  const autori = [...new Set(libri.map(libro => libro.autore))];
+  
+  return {
+    totaleLibri,
+    libriDisponibili,
+    totalePagine,
+    mediaPagine,
+    autori
+  };
+}
+
+*/
