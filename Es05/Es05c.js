@@ -579,7 +579,7 @@ pagine: 328
 console.log("Statistiche:", miabiblioteca.getStatistiche());
 console.log("\nEsporta JSON:");
 console.log(miabiblioteca.esportaJSON());
-Simula riavvio applicazione
+//Simula riavvio applicazione
 const bibliotecaDoporiavvio = new BibliotecaPersistente();
 console.log("\nLibri dopo riavvio:", bibliotecaDoporiavvio.libri.length);
 
