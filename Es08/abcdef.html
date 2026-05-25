@@ -119,7 +119,7 @@
   <div class="campo">
     <label for="cf">Codice Fiscale</label>
     <input type="password" id="pw" placeholder="Inserisci il codice fiscale"
-           oninput="controllaPw()">
+           oninput="this.value = this.value.toUpperCase()">
   </div>
 
   <!-- ES6 — password con sfondo che cambia colore -->
