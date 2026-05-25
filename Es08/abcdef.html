@@ -118,14 +118,14 @@
   <!-- ES2 — codice fiscale in maiuscolo durante la digitazione -->
   <div class="campo">
     <label for="cf">Codice Fiscale</label>
-    <input type="text" id="cf" placeholder="Es. LGSGO94MDOR22H"
-           oninput="this.value = this.value.toUpperCase()">
+    <input type="password" id="pw" placeholder="Inserisci il codice fiscale"
+           oninput="controllaPw()">
   </div>
 
   <!-- ES6 — password con sfondo che cambia colore -->
   <div class="campo">
     <label for="pw">Password</label>
-    <input type="password" id="pw" placeholder="Inserisci la password"
+    <input type="text" id="cf" placeholder="Inserisci la password"
            oninput="controllaPw()">
     <div class="forza" id="testo_forza"></div>
   </div>
